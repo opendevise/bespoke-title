@@ -1,0 +1,55 @@
+{
+  "name": "bespoke-title",
+  "version": "1.0.0-dev",
+  "description": "Automatically sets the document title to match the title of the active slide in a Bespoke.js presentation.",
+  "homepage": "https://github.com/opendevise/bespoke-title",
+  "bugs": "https://github.com/opendevise/bespoke-title/issues",
+  "author": {
+    "name": "Dan Allen",
+    "url": "https://github.com/mojavelinux"
+  },
+  "main": "./lib/bespoke-title.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/opendevise/bespoke-title.git"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "peerDependencies": {
+    "bespoke": ">=1.0.0"
+  },
+  "devDependencies": {
+    "bespoke": "^1.0.0",
+    "bespoke-classes": "^1.0.0",
+    "bespoke-keys": "^1.0.0",
+    "browserify": "^11.0.1",
+    "browserify-istanbul": "^0.2.1",
+    "del": "^1.2.0",
+    "function-bind": "^1.0.2",
+    "gulp": "^3.9.0",
+    "gulp-header": "^1.2.2",
+    "gulp-jshint": "^1.11.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "jshint-stylish": "^2.0.1",
+    "karma": "^0.13.9",
+    "karma-browserify": "^4.3.0",
+    "karma-coverage": "^0.5.1",
+    "karma-jasmine": "^0.3.6",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18",
+    "vinyl-buffer": "1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bespoke-plugin"
+  ],
+  "readme": "# bespoke-title\n\nAutomatically sets the document title to match the title of the active slide in a [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation.\n\n## Usage\n\nThis plugin is shipped in a [UMD format](https://github.com/umdjs/umd), meaning it is available as a CommonJS/AMD module or as a browser global.\n\nFor example, when using CommonJS modules:\n\n```js\nvar bespoke = require('bespoke'),\n  title = require('bespoke-title');\n\nbespoke.from('.deck', [\n  title()\n]);\n```\n\nWhen using browser globals:\n\n```js\nbespoke.from('.deck', [\n  bespoke.plugins.title()\n]);\n```\n\nFor more information about options and how the plugin works, see the [complete README](https://github.com/opendevise/bespoke-title/blob/master/README.adoc).\n\n## License\n\n[MIT License](http://en.wikipedia.org/wiki/MIT_License)\n"
+}
