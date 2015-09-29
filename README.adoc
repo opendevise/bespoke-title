@@ -3,14 +3,14 @@ Dan Allen <https://github.com/mojavelinux>
 // Settings:
 :idprefix:
 :idseparator: -
-//ifdef::env-github[:badges:]
+ifdef::env-github[:badges:]
 // Variables:
 :release-version: master
 // URIs:
 :uri-raw-file-base: https://raw.githubusercontent.com/opendevise/bespoke-title/{release-version}
 
 ifdef::badges[]
-image:https://img.shields.io/npm/v/bespoke-title.svg[npm package, link=https://www.npmjs.com/package/bespoke-title]
+//image:https://img.shields.io/npm/v/bespoke-title.svg[npm package, link=https://www.npmjs.com/package/bespoke-title]
 image:https://img.shields.io/travis/opendevise/bespoke-title/master.svg[Build Status (Travis CI), link=https://travis-ci.org/opendevise/bespoke-title]
 endif::[]
 
@@ -18,7 +18,7 @@ Automatically sets the document title to match the title of the active slide in 
 
 == Example
 
-//http://opendevise.github.io/bespoke-title[View the demo] online.
+http://opendevise.github.io/bespoke-title[View the demo] online.
 
 This repository includes a demo folder the shows this plugin in action.
 To view it locally, you first need to clone this repository:
