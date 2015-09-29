@@ -1,6 +1,5 @@
 = bespoke-title
 Dan Allen <https://github.com/mojavelinux>
-v1.0.0, 2015-09-28
 // Settings:
 :idprefix:
 :idseparator: -
