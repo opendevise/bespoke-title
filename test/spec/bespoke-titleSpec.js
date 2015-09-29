@@ -8,7 +8,7 @@ describe('bespoke-title', function() {
     setup = function() {
       document.title = 'bespoke-title tests';
     },
-    createDeck = function() {
+    createDeck = function(opts) {
       var parent = document.createElement('article');
       for (var i = 1; i <= 5; i++) {
         var section = document.createElement('section');
@@ -27,7 +27,7 @@ describe('bespoke-title', function() {
       document.body.appendChild(parent);
 
       deck = bespoke.from(parent, [
-        title()
+        title(opts)
       ]);
     },
     destroyDeck = function() {
@@ -50,7 +50,7 @@ describe('bespoke-title', function() {
   });
 
   describe('slide change', function() {
-    beforeEach(createDeck);
+    beforeEach(function() { createDeck(); });
     afterEach(destroyDeck);
 
     it('should set title to h2 text when slide without data-title attribute is activated', function() {
@@ -63,6 +63,19 @@ describe('bespoke-title', function() {
       expect(document.title).toBe('bespoke-title tests');
       deck.slide(2);
       expect(document.title).toBe('Override Slide 3 — bespoke-title tests');
+    });
+  });
+
+  describe('custom options', function() {
+    describe('separator option', function() {
+      beforeEach(function() { createDeck({ separator: ': ' }); });
+      afterEach(destroyDeck);
+
+      it('should use the separator specified by the separator option', function() {
+        expect(document.title).toBe('bespoke-title tests');
+        deck.slide(2);
+        expect(document.title).toBe('Override Slide 3: bespoke-title tests');
+      });
     });
   });
 });
