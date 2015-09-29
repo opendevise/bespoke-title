@@ -87,6 +87,12 @@ bespoke.from('.deck', [
 ]);
 ```
 
+== Behavior
+
+This plugin updates the document title to match the slide title when each slide is activated.
+The slide title is derived from either the `data-title` attribute on the slide or, if the `data-title` attribute is absent, the first `<h1>` or `<h2>` heading in the slide.
+If the `data-title` attribute is present but empty, or there is no `<h1>` or `<h2>` heading in the slide, the document title reverts back to the presentation title.
+
 == License
 
 http://en.wikipedia.org/wiki/MIT_License[MIT License]
