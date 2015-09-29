@@ -67,6 +67,17 @@ describe('bespoke-title', function() {
   });
 
   describe('custom options', function() {
+    describe('title option', function() {
+      beforeEach(function() { createDeck({ title: 'Demo' }); });
+      afterEach(destroyDeck);
+
+      it('should use the title specified by the title option', function() {
+        expect(document.title).toBe('Demo');
+        deck.slide(2);
+        expect(document.title).toBe('Override Slide 3 — Demo');
+      });
+    });
+
     describe('separator option', function() {
       beforeEach(function() { createDeck({ separator: ': ' }); });
       afterEach(destroyDeck);

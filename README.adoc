@@ -66,6 +66,27 @@ bespoke.from('.deck', [
 ]);
 ```
 
+=== Options
+
+The following options are available when registering the bespoke-title plugin:
+
+title _(type: string, default: document.title)_::
+The title of the presentation, which appears after the title of the slide in the document's title.
+
+separator _(type: string, default: ' — ')_::
+The separator to place between the slide title and the presentation title in the document's title.
+No additional spaces are added to this value.
+
+==== Options example
+
+Here's an example showing most of the options in use:
+
+```
+bespoke.from('.deck', [
+  title({ title: 'Demo', separator: ': ' })
+]);
+```
+
 == License
 
 http://en.wikipedia.org/wiki/MIT_License[MIT License]
