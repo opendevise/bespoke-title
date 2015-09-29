@@ -1,6 +1,6 @@
 {
   "name": "bespoke-title",
-  "version": "1.0.0-dev",
+  "version": "1.0.0",
   "description": "Automatically sets the document title to match the title of the active slide in a Bespoke.js presentation.",
   "homepage": "https://github.com/opendevise/bespoke-title",
   "bugs": "https://github.com/opendevise/bespoke-title/issues",
