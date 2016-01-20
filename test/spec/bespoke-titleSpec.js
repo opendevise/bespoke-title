@@ -13,7 +13,7 @@ describe('bespoke-title', function() {
       for (var i = 1; i <= 5; i++) {
         var section = document.createElement('section');
         var slideTitle = document.createElement('h2');
-        slideTitle.appendChild(document.createTextNode('Slide ' + i));
+        slideTitle.textContent = "\n    Slide " + i + "\n";
         section.appendChild(slideTitle);
         if (i === 1) {
           section.setAttribute('data-title', '');
@@ -57,6 +57,7 @@ describe('bespoke-title', function() {
       expect(document.title).toBe('bespoke-title tests');
       deck.next();
       expect(document.title).toBe('Slide 2 — bespoke-title tests');
+      expect(document.head.querySelector('title').textContent).toBe('Slide 2 — bespoke-title tests');
     });
 
     it('should set title to data-title when slide with data-title attribute is activated', function() {
