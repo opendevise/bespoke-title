@@ -20,7 +20,7 @@ Automatically sets the document title to match the title of the active slide in 
 
 http://opendevise.github.io/bespoke-title[View the demo] online.
 
-This repository includes a demo folder the shows this plugin in action.
+This repository includes a demo folder that shows this plugin in action.
 To view it locally, you first need to clone this repository:
 
  $ git clone https://github.com/opendevise/bespoke-title && cd bespoke-title
